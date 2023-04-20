@@ -1,6 +1,6 @@
 import './globals.css';
 import Navbar from '@/components/Navbar';
-import { questrial } from '@/lib/fonts';
+import { questrial } from '@/lib/Fonts';
 
 export const metadata = {
 	title: 'Random Reviews',
