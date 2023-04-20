@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import { questrial } from '@/lib/fonts';
 import { useState } from 'react';
 import {
 	CgFilm,
@@ -15,23 +14,24 @@ const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
-		<header aria-label="Site Header" class="bg-light w-full">
-			<div
-				className={` ${questrial.className} mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8`}>
+		<header
+			aria-label="Site Header"
+			className=" bg-neutral text-gray-200 w-full">
+			<div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
 				<div className="flex h-16 items-center justify-between">
 					<div className="hidden  w-full justify-center md:flex">
 						<nav aria-label="Site Nav">
 							<ul className="flex items-center md:text-lg  gap-6 text-sm">
 								<li>
 									<Link
-										className="text-gray-500 transition hover:text-gray-500/75"
+										className="transition hover:text-accent"
 										href="/home">
 										Home
 									</Link>
 								</li>
 								<li>
 									<Link
-										className="text-gray-500 transition hover:text-gray-500/75"
+										className=" transition hover:text-accent"
 										href="/movies">
 										Movies
 									</Link>
@@ -39,7 +39,7 @@ const Navbar = () => {
 
 								<li>
 									<Link
-										className="text-gray-500 transition hover:text-gray-500/75"
+										className=" transition hover:text-accent"
 										href="/games">
 										Games
 									</Link>
@@ -47,7 +47,7 @@ const Navbar = () => {
 
 								<li>
 									<Link
-										className="text-gray-500 transition hover:text-gray-500/75"
+										className=" transition hover:text-accent"
 										href="/tv">
 										TV
 									</Link>
@@ -55,7 +55,7 @@ const Navbar = () => {
 
 								<li>
 									<Link
-										className="text-gray-500 transition hover:text-gray-500/75"
+										className="transition hover:text-accent"
 										href="/music">
 										Music
 									</Link>
@@ -67,59 +67,74 @@ const Navbar = () => {
 					<div
 						className={`c-hamburger c-hamburger--magnetic ${
 							isOpen ? `active` : ``
-						} flex justify-center w-screen md:hidden`}
+						}  w-screen md:hidden`}
 						onClick={() => setIsOpen(!isOpen)}>
 						<div className="c-hamburger-inner">
 							<span className="c-hamburger-bar"></span>
 							<span className="c-hamburger-bar"></span>
 							<span className="c-hamburger-bar"></span>
 						</div>
+						<h1 className=" w-96 bg-gradient-to-r from-accent via-primary to-accent bg-clip-text  font-extrabold text-transparent text-2xl text-center ">
+							Random Reviews
+						</h1>
 					</div>
 				</div>
 			</div>
 			{isOpen && (
-				<div class="flex h-screen flex-col justify-between border-r bg-light">
-					<div class="px-4 py-6">
+				<div className="flex w-56 h-screen flex-col justify-between absolute z-30 border-r bg-light">
+					<div className="px-4 py-6">
 						<nav
 							aria-label="Main Nav"
-							class="mt-6 flex flex-col gap-16 text-5xl">
+							className="mt-6 flex flex-col gap-16 text-5xl">
 							<Link
-								href="#"
-								class="flex items-center gap-2 rounded-lg bg-gray-100 px-4 py-4 text-gray-700">
+								href="/home"
+								className="flex items-center gap-2 rounded-lg bg-gray-100 px-4 py-4 text-gray-700">
 								<CgHome />
 
-								<span class="text-sm font-medium"> Home </span>
+								<span className="text-sm font-medium">
+									{' '}
+									Home{' '}
+								</span>
 							</Link>
 							<Link
-								href="#"
-								class="flex items-center gap-2 rounded-lg bg-gray-100 px-4 py-4 text-gray-700">
+								href="/movies"
+								className="flex items-center gap-2 rounded-lg bg-gray-100 px-4 py-4 text-gray-700">
 								<CgFilm />
 
-								<span class="text-sm font-medium">
+								<span className="text-sm font-medium">
 									{' '}
 									Movies{' '}
 								</span>
 							</Link>
 							<Link
-								href="#"
-								class="flex items-center gap-2 rounded-lg bg-gray-100 px-4 py-4 text-gray-700">
+								href="/music"
+								className="flex items-center gap-2 rounded-lg bg-gray-100 px-4 py-4 text-gray-700">
 								<CgMusicSpeaker />
 
-								<span class="text-sm font-medium"> Music </span>
+								<span className="text-sm font-medium">
+									{' '}
+									Music{' '}
+								</span>
 							</Link>
 							<Link
-								href="#"
-								class="flex items-center gap-2 rounded-lg bg-gray-100 px-4 py-4 text-gray-700">
+								href="/tv"
+								className="flex items-center gap-2 rounded-lg bg-gray-100 px-4 py-4 text-gray-700">
 								<CgScreen />
 
-								<span class="text-sm font-medium"> TV </span>
+								<span className="text-sm font-medium">
+									{' '}
+									TV{' '}
+								</span>
 							</Link>
 							<Link
-								href="#"
-								class="flex items-center gap-2 rounded-lg bg-gray-100 px-4 py-4 text-gray-700">
+								href="/games"
+								className="flex items-center gap-2 rounded-lg bg-gray-100 px-4 py-4 text-gray-700">
 								<CgGames />
 
-								<span class="text-sm font-medium"> Games </span>
+								<span className="text-sm font-medium">
+									{' '}
+									Games{' '}
+								</span>
 							</Link>
 						</nav>
 					</div>

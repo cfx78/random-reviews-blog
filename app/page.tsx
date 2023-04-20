@@ -1,13 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { BsFileEarmarkMusic, BsFilm, BsTv, BsController } from 'react-icons/bs';
-import { motion } from 'framer-motion';
-import { questrial } from '@/lib/fonts';
 
 const Dashboard = () => {
 	return (
-		<main className={`${questrial.className} h-screen w-screen`}>
+		<main className="h-screen w-screen">
 			<section className=" bg-neutral h-full w-full text-light flex justify-center items-center">
 				<div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
 					<div className="mx-auto max-w-3xl text-center">
