@@ -1,28 +1,19 @@
-'use client';
-
 import { FaRegThumbsUp, FaRegThumbsDown } from 'react-icons/fa';
 import { CgFilm, CgGames, CgMusicSpeaker, CgScreen } from 'react-icons/cg';
 import Link from 'next/link';
 import Header from '@/components/Header';
-import { motion } from 'framer-motion';
 
 const page = () => {
 	return (
-		<div className="h-fit w-screen  bg-neutral">
-			<motion.div
-				initial={{ opacity: 0, y: -100 }}
-				animate={{ opacity: 1, y: 0 }}
-				transition={{ duration: 0.5, ease: 'easeInOut' }}>
-				<Header category="Home" />
-			</motion.div>
-			<section className="w-screen h-screen flex flex-col justify-center items-center text-light">
+		<div className="h-fit w-screen lg:h-screen  bg-neutral">
+			<Header category="Home" />
+
+			<section
+				className="w-screen h-max  lg:pt-56
+			  flex flex-col justify-center items-center text-light">
 				<div className="max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
-					<div className="grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:items-center lg:gap-x-16">
-						<motion.div
-							initial={{ opacity: 0, x: -100 }}
-							animate={{ opacity: 1, x: 0 }}
-							transition={{ duration: 0.5, ease: 'easeInOut' }}
-							className="mx-auto max-w-lg text-center lg:mx-0 ltr:lg:text-left rtl:lg:text-right">
+					<div className="grid grid-cols-1 h-fit gap-y-8 lg:grid-cols-2 lg:items-center lg:gap-x-16">
+						<div className="mx-auto max-w-lg text-center lg:mx-0 ltr:lg:text-left rtl:lg:text-right">
 							<h2 className="text-4xl text-primary font-bold sm:text-5xl">
 								My approach to reviews
 							</h2>
@@ -43,12 +34,9 @@ const page = () => {
 								to the original source. Thanks for reading! I
 								hope you enjoy the site.
 							</p>
-						</motion.div>
+						</div>
 
-						<motion.div
-							initial={{ opacity: 0, x: 100 }}
-							animate={{ opacity: 1, x: 0 }}
-							transition={{ duration: 0.5, ease: 'easeInOut' }}>
+						<div>
 							<h4
 								className="text-2xl text-primary font-bold sm:text-3xl pb-6
 							">
@@ -96,7 +84,7 @@ const page = () => {
 									</h2>
 								</Link>
 							</div>
-						</motion.div>
+						</div>
 					</div>
 				</div>
 			</section>

@@ -1,9 +1,6 @@
-'use client';
-
 import getTvPosts from '@/utils/getTvPosts';
 import Card from '@/components/Card';
 import Header from '@/components/Header';
-import { motion } from 'framer-motion';
 
 const Tv = async () => {
 	const tvPosts = await getTvPosts();
@@ -11,15 +8,7 @@ const Tv = async () => {
 	return (
 		<div className="w-full h-screen bg-neutral">
 			<Header category="TV" />
-			<motion.div
-				initial={{ opacity: 0, y: 100 }}
-				animate={{ opacity: 1, y: 0 }}
-				transition={{
-					duration: 0.5,
-					type: 'spring',
-					stiffness: 100,
-				}}
-				className="max-w-5xl mx-auto space-y-10">
+			<div className="max-w-5xl mx-auto space-y-10">
 				{tvPosts.map((tvPost) => (
 					<Card
 						img={tvPost.image}
@@ -34,7 +23,7 @@ const Tv = async () => {
 						rating={tvPost.rating}
 					/>
 				))}
-			</motion.div>
+			</div>
 		</div>
 	);
 };
