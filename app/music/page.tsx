@@ -6,7 +6,7 @@ const Music = async () => {
 	const musicPosts = await getMusicPosts();
 
 	return (
-		<div className="w-full h-screen bg-neutral">
+		<div className="w-full min-h-screen bg-neutral">
 			<Header category="Music" />
 			<div className="max-w-5xl mx-auto space-y-10">
 				{musicPosts.map((musicPost) => (

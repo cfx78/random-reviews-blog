@@ -7,7 +7,7 @@ const Movies = async () => {
 	const moviePosts = await getMoviePosts();
 
 	return (
-		<div className="w-full h-screen bg-neutral">
+		<div className="w-full min-h-screen  bg-neutral">
 			<Header category="Movies" />
 			<div className="max-w-5xl mx-auto space-y-10">
 				{moviePosts.map((moviePost) => (

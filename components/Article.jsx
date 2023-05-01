@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { PortableText } from '@portabletext/react';
 const Article = (props) => {
 	return (
-		<div className="w-screen h-screen bg-secondary">
+		<div className="w-screen h-max bg-secondary mb-10">
 			<div className="w-full h-fit md:pt-0 flex flex-col items-center">
 				<div
 					className="md:mt-11 mb-0 w-full max-w-screen-md mx-auto relative "

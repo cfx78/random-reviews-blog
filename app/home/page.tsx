@@ -5,7 +5,7 @@ import Header from '@/components/Header';
 
 const page = () => {
 	return (
-		<div className="h-fit w-screen lg:h-screen  bg-neutral">
+		<div className="h-fit w-screen lg:h-max  bg-neutral">
 			<Header category="Home" />
 
 			<section

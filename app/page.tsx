@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Dashboard = () => {
 	return (
 		<main className="h-screen w-screen">
-			<section className=" bg-neutral h-full w-full text-light flex justify-center items-center">
+			<section className=" bg-secondary h-full w-full text-light flex justify-center items-center">
 				<div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
 					<div className="mx-auto max-w-3xl text-center">
 						<h1 className="bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-4xl font-extrabold text-transparent sm:text-5xl">
