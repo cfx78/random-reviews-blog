@@ -1,7 +1,7 @@
 import getMusicPosts from '@/utils/getMusicPosts';
 import Card from '@/components/Card';
 import Header from '@/components/Header';
-
+export const revalidate = 60;
 const Music = async () => {
 	const musicPosts = await getMusicPosts();
 

@@ -24,7 +24,7 @@ export default async function Post({ params }: Props) {
 	);
 }
 
-export const revalidate = 60;
+
 
 export async function generateStaticParams() {
 	const getPosts = await getMusicPosts();

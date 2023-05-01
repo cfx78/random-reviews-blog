@@ -1,6 +1,7 @@
 import getMoviePosts from '@/utils/getMoviePosts';
 import Card from '@/components/Card';
 import Header from '@/components/Header';
+export const revalidate = 60;
 
 const Movies = async () => {
 	const moviePosts = await getMoviePosts();

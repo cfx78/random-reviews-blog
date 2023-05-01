@@ -1,7 +1,7 @@
 import getGamesPosts from '@/utils/getGamesPosts';
 import Card from '@/components/Card';
 import Header from '@/components/Header';
-
+export const revalidate = 60;
 const Games = async () => {
 	const gamesPosts = await getGamesPosts();
 	return (

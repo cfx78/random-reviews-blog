@@ -1,7 +1,7 @@
 import getTvPosts from '@/utils/getTvPosts';
 import Card from '@/components/Card';
 import Header from '@/components/Header';
-
+export const revalidate = 60;
 const Tv = async () => {
 	const tvPosts = await getTvPosts();
 
